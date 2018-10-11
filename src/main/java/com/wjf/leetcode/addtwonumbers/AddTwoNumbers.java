@@ -23,8 +23,7 @@ public class AddTwoNumbers {
             System.out.print(resultNode.val);
             resultNode = resultNode.next;
         }
-        StringBuilder sb = new StringBuilder();
-        System.out.println(Long.parseLong(sb.append("1999999999").reverse().toString()));
+        System.out.println();
     }
 
     private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
