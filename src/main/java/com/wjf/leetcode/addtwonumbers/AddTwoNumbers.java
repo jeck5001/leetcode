@@ -18,7 +18,9 @@ public class AddTwoNumbers {
         ListNode l2 = new ListNode(5);
         l2.next = new ListNode(6);
         l2.next.next = new ListNode(4);
+        long beginTime = System.currentTimeMillis();
         ListNode resultNode = addTwoNumbers(l1, l2);
+        System.out.println("用时: " + (System.currentTimeMillis() - beginTime));
         while (resultNode != null) {
             System.out.print(resultNode.val);
             resultNode = resultNode.next;
@@ -26,6 +28,12 @@ public class AddTwoNumbers {
         System.out.println();
     }
 
+    /**
+     * 先把两个加数链表分别转为字符串，再反转后相加，然后再把相加结果倒序挨个加入待返回的链表
+     * @param l1    链表1
+     * @param l2    链表2
+     * @return ListNode
+     */
     private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode firstListNode = null, e;
         StringBuilder l1Str = new StringBuilder();
