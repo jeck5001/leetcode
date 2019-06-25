@@ -1,0 +1,21 @@
+# Created by .ignore support plugin (hsz.mobi)
+.DS_Store
+.classpath
+.project
+.settings
+target/
+out/
+*.log
+image/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+*.class
+*.iml
+node_modules/
+*.patch
+src/main/resources_local
+.idea/
