@@ -4,8 +4,9 @@ import java.math.BigInteger;
 
 /**
  * description ：给定两个非空链表来表示两个非负整数。位数按照逆序方式存储，它们的每个节点只存储单个数字。
- *               将两数相加返回一个新的链表。
- *               你可以假设除了数字 0 之外，这两个数字都不会以零开头
+ * 将两数相加返回一个新的链表。
+ * 你可以假设除了数字 0 之外，这两个数字都不会以零开头
+ *
  * @author : wjf
  * Date ：2018/10/11 10:44
  */
@@ -30,8 +31,9 @@ public class AddTwoNumbers {
 
     /**
      * 先把两个加数链表分别转为字符串，再反转后相加，然后再把相加结果倒序挨个加入待返回的链表
-     * @param l1    链表1
-     * @param l2    链表2
+     *
+     * @param l1 链表1
+     * @param l2 链表2
      * @return ListNode
      */
     private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -51,7 +53,7 @@ public class AddTwoNumbers {
         BigInteger sum = addend.add(summand);
         char[] sumArray = sum.toString().toCharArray();
         for (int i = sumArray.length - 1; i >= 0; i--) {
-            if(firstListNode == null){
+            if (firstListNode == null) {
                 e = firstListNode = new ListNode(Integer.parseInt(String.valueOf(sumArray[i])));
             } else {
                 e.next = new ListNode(Integer.parseInt(String.valueOf(sumArray[i])));

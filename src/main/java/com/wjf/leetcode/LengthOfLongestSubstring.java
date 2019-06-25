@@ -2,6 +2,7 @@ package com.wjf.leetcode;
 
 /**
  * description ：给定一个字符串，找出不含有重复字符的最长子串的长度。
+ *
  * @author : wjf
  * Date ：2018/10/11 15:36
  */
@@ -20,20 +21,20 @@ public class LengthOfLongestSubstring {
      * @return int
      */
     private static int lengthOfLongestSubstring(String s) {
-        if(s == null || "".equals(s)){
+        if (s == null || "".equals(s)) {
             return 0;
         }
-        if(s.length() == 1){
+        if (s.length() == 1) {
             return 1;
         }
         int result = 1;
         char[] strArray = s.toCharArray();
         StringBuilder resultStr = new StringBuilder();
-        for(char str : strArray){
+        for (char str : strArray) {
             int charIndex;
-            if((charIndex = resultStr.toString().indexOf(str)) == -1){
+            if ((charIndex = resultStr.toString().indexOf(str)) == -1) {
                 resultStr.append(str);
-                if(resultStr.length() > result){
+                if (resultStr.length() > result) {
                     result = resultStr.length();
                 }
             } else {
